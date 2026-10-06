@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>恋愛流言社 | 恋愛の、確かな流言を。</title>
+<meta name="description" content="恋愛流言社は、片思い・告白・デートなどの恋愛コラムをお届けするWebメディアです。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rose:#a8566a; --rose-l:#c98a98; --ivory:#faf4f2; --greige:#efe9e4;
+  --ink:#2e2629; --sub:#857a7e; --line:#e4d9d5;
+  --mincho:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  /* ライターごとの画像トーン */
+  --w-tsukino:#e8d3d6; --w-momokawa:#dcd6df; --w-hoshino:#eadbc9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;color:var(--ink);background:#fff;line-height:1.95;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+ul,ol{list-style:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:72px 0}
+.h2{font-family:var(--mincho);font-weight:700;font-size:1.5rem;letter-spacing:.1em;margin-bottom:36px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:12px}
+.h2 a{font-family:"Zen Kaku Gothic New",sans-serif;font-size:.78rem;font-weight:400;letter-spacing:.06em;color:var(--sub);border-bottom:1px solid var(--line)}
+.h2 a:hover{color:var(--rose);border-color:var(--rose)}
+
+/* masthead */
+header{border-bottom:1px solid var(--line);background:#fff}
+.mast{padding:26px 0 14px;text-align:center}
+.logo{font-family:var(--mincho);font-weight:700;font-size:1.9rem;letter-spacing:.28em;padding-left:.28em;color:var(--ink)}
+.logo small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:400;font-size:.68rem;letter-spacing:.2em;color:var(--sub);margin-top:2px}
+.gnav{border-top:1px solid var(--line);margin-top:16px}
+.gnav ul{display:flex;gap:30px;justify-content:center;overflow-x:auto;white-space:nowrap;padding:12px 24px;font-size:.84rem}
+.gnav a{color:var(--ink);padding-bottom:3px;border-bottom:1px solid transparent}
+.gnav a:hover{color:var(--rose);border-color:var(--rose)}
+@media(max-width:700px){.gnav ul{justify-content:flex-start;gap:22px}.logo{font-size:1.5rem}}
+
+/* image placeholder: <img>を入れるとそのまま差し替えできます */
+.img{background:var(--w-tsukino);display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:2.6rem}
+.img>span{opacity:.5;filter:grayscale(.3)}
+.img img{width:100%;height:100%;object-fit:cover;display:block}
+.w1{background:linear-gradient(160deg,var(--w-tsukino),#f3e7e8)}
+.w2{background:linear-gradient(160deg,var(--w-momokawa),#eeeaf0)}
+.w3{background:linear-gradient(160deg,var(--w-hoshino),#f4eadf)}
+.cat{font-size:.72rem;letter-spacing:.14em;color:var(--rose)}
+.by{font-size:.76rem;color:var(--sub);display:flex;align-items:center;gap:8px}
+.by i{display:inline-block;width:14px;height:2px}
+
+/* hero */
+.hero{padding:56px 0 64px;background:var(--ivory)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:end}
+.hero .img{aspect-ratio:4/3}
+.hero .tag{font-family:var(--mincho);font-size:1.15rem;letter-spacing:.16em;color:var(--rose);margin-bottom:20px}
+.hero h1{font-family:var(--mincho);font-weight:700;font-size:2.7rem;line-height:1.55;letter-spacing:.1em}
+.hero .lead{font-size:.88rem;color:var(--sub);margin-top:18px;max-width:23em}
+.hero .pick{display:block;margin-top:36px;padding-top:18px;border-top:1px solid var(--line)}
+.hero .pick b{display:block;font-family:var(--mincho);font-size:1.12rem;line-height:1.75;margin:4px 0 8px;font-weight:700}
+.hero .pick:hover b{color:var(--rose)}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr;gap:36px}.hero h1{font-size:2.1rem}.hero .tag{margin-bottom:12px}}
+
+/* categories */
+.cats{padding:44px 0 0}
+.cats ul{display:flex;flex-wrap:wrap;gap:6px 0;font-size:.88rem}
+.cats li+li::before{content:"/";color:var(--line);margin:0 14px}
+.cats a{border-bottom:1px solid transparent;padding-bottom:2px}
+.cats a:hover{color:var(--rose);border-color:var(--rose)}
+
+/* articles */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:56px 36px}
+.a{display:block}
+.a .img{aspect-ratio:3/2;margin-bottom:16px}
+.a h3{font-family:var(--mincho);font-weight:700;font-size:1.08rem;line-height:1.75;letter-spacing:.04em;margin:4px 0 10px}
+.a:hover h3{color:var(--rose)}
+.a.lead{grid-column:span 2;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center}
+.a.lead .img{aspect-ratio:4/3;margin:0}
+.a.lead h3{font-size:1.4rem}
+.a.sq .img{aspect-ratio:1/1}
+@media(max-width:860px){.grid{grid-template-columns:1fr 1fr}.a.lead{grid-column:span 2}}
+@media(max-width:600px){.grid{grid-template-columns:1fr;gap:44px}.a.lead{grid-column:auto;display:block}.a.lead .img{margin-bottom:16px}}
+
+/* ranking & writers */
+.soft{background:var(--greige)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+@media(max-width:820px){.two{grid-template-columns:1fr;gap:64px}}
+.rank li{display:flex;gap:22px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
+.rank li:first-child{padding-top:0}
+.rank .n{font-family:var(--mincho);font-size:1.9rem;color:var(--rose-l);width:30px;flex:none;line-height:1}
+.rank a{font-family:var(--mincho);font-weight:500;line-height:1.75}
+.rank a:hover{color:var(--rose)}
+.rank small{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-size:.72rem;letter-spacing:.12em;color:var(--sub)}
+.writer{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.writer:first-of-type{padding-top:0}
+.av{flex:none;width:64px;height:84px;display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+.writer b{font-family:var(--mincho);font-size:1.05rem;letter-spacing:.08em}
+.writer small{display:block;font-size:.72rem;letter-spacing:.12em;color:var(--rose)}
+.writer p{font-size:.84rem;color:var(--sub);line-height:1.85;margin-top:6px}
+
+/* about */
+.about .box{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);padding:44px 0}
+.about .h2{border:0;padding:0;margin:0}
+.about p{font-size:.94rem}
+.about a{display:inline-block;margin-top:20px;font-size:.84rem;letter-spacing:.08em;padding:9px 22px;border:1px solid var(--ink)}
+.about a:hover{background:var(--ink);color:#fff}
+@media(max-width:700px){.about .box{grid-template-columns:1fr;gap:20px}}
+
+/* footer */
+footer{background:var(--ink);color:#cfc5c8;padding:56px 0 34px;font-size:.82rem}
+footer .fl{font-family:var(--mincho);font-weight:700;font-size:1.3rem;letter-spacing:.24em;color:#fff}
+footer ul{display:flex;flex-wrap:wrap;gap:8px 28px;margin:20px 0 30px}
+footer ul a:hover{color:#fff;text-decoration:underline}
+.notice{border-top:1px solid #54484d;padding-top:20px;color:#fff;letter-spacing:.04em}
+.copy{margin-top:18px;font-size:.72rem;color:#9a8f93}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap mast">
+    <a class="logo" href="index.html">恋愛流言社<small>RENAI RYUGENSHA</small></a>
+  </div>
+  <nav class="gnav" aria-label="メインメニュー">
+    <ul>
+      <li><a href="#articles">新着記事</a></li>
+      <li><a href="#ranking">ランキング</a></li>
+      <li><a href="#writers">ライター</a></li>
+      <li><a href="#about">サイトについて</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <a href="#"><div class="img w1"><span>🧛</span></div></a>
+    <div>
+      <p class="tag">Pick Up</p>
+      <h1>恋愛の、<br>確かな流言を。</h1>
+      <p class="lead">片思いからカップルの悩みまで。眠る前に読みたい、恋愛コラムマガジン。</p>
+      <a class="pick" href="#">
+        <span class="cat">デート</span>
+        <b>吸血鬼の彼が、夜型デートを断れない本当の理由</b>
+        <span class="by"><i style="background:var(--rose-l)"></i>月野 ことね　2026.10.06</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="cats">
+  <div class="wrap">
+    <ul>
+      <li><a href="#">恋愛</a></li><li><a href="#">片思い</a></li><li><a href="#">告白</a></li><li><a href="#">デート</a></li><li><a href="#">カップル</a></li><li><a href="#">恋愛心理</a></li><li><a href="#">LINE</a></li><li><a href="#">プレゼント</a></li><li><a href="#">恋愛相談</a></li><li><a href="#">恋愛コラム</a></li><li><a href="#">インタビュー</a></li>
+    </ul>
+  </div>
+</div>
+
+<section id="articles">
+  <div class="wrap">
+    <h2 class="h2">新着記事<a href="#">記事一覧</a></h2>
+    <div class="grid">
+      <a class="a lead" href="#"><div class="img w2"><span>🧝</span></div><div><p class="cat">片思い</p><h3>エルフの彼に既読がつかない…300年待つべき？</h3><p class="by"><i style="background:var(--w-momokawa)"></i>桃川 はる　2026.10.05</p></div></a>
+      <a class="a sq" href="#"><div class="img w3"><span>🐉</span></div><p class="cat">プレゼント</p><h3>ドラゴン彼氏に喜ばれる記念日ギフト5選</h3><p class="by"><i style="background:var(--w-hoshino)"></i>星乃 みお　2026.10.04</p></a>
+      <a class="a" href="#"><div class="img w1"><span>🧜</span></div><p class="cat">LINE</p><h3>人魚の「おやすみ」に隠れた本音を読み解く</h3><p class="by"><i style="background:var(--w-tsukino)"></i>月野 ことね　2026.10.03</p></a>
+      <a class="a" href="#"><div class="img w2"><span>🦊</span></div><p class="cat">恋愛心理</p><h3>九尾の狐が駆け引きをやめられない心理とは</h3><p class="by"><i style="background:var(--w-momokawa)"></i>桃川 はる　2026.10.02</p></a>
+      <a class="a" href="#"><div class="img w3"><span>🧚</span></div><p class="cat">告白</p><h3>妖精に告白するなら、満月の夜が正解なワケ</h3><p class="by"><i style="background:var(--w-hoshino)"></i>星乃 みお　2026.10.01</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="soft">
+  <div class="wrap two">
+    <div id="ranking">
+      <h2 class="h2">人気ランキング</h2>
+      <ol class="rank">
+        <li><span class="n">1</span><a href="#">吸血鬼の彼が、夜型デートを断れない本当の理由<small>デート</small></a></li>
+        <li><span class="n">2</span><a href="#">ドラゴン彼氏に喜ばれる記念日ギフト5選<small>プレゼント</small></a></li>
+        <li><span class="n">3</span><a href="#">エルフの彼に既読がつかない…300年待つべき？<small>片思い</small></a></li>
+        <li><span class="n">4</span><a href="#">人魚の「おやすみ」に隠れた本音を読み解く<small>LINE</small></a></li>
+        <li><span class="n">5</span><a href="#">妖精に告白するなら、満月の夜が正解なワケ<small>告白</small></a></li>
+      </ol>
+    </div>
+    <div id="writers">
+      <h2 class="h2">ライター</h2>
+      <div class="writer"><div class="av" style="background:var(--w-tsukino)" aria-hidden="true">🌙</div><div><small>恋愛コラムニスト</small><b>月野 ことね</b><p>夜のデート事情と、すれ違いの心理を、しっとりした文体で。</p></div></div>
+      <div class="writer"><div class="av" style="background:var(--w-momokawa)" aria-hidden="true">🍑</div><div><small>恋愛心理ライター</small><b>桃川 はる</b><p>片思いの駆け引きやLINEの読み解きを、軽やかに。</p></div></div>
+      <div class="writer"><div class="av" style="background:var(--w-hoshino)" aria-hidden="true">⭐</div><div><small>ギフト・記念日担当</small><b>星乃 みお</b><p>贈り物と告白のタイミングを、やさしい語り口で。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="box">
+      <h2 class="h2">恋愛流言社について</h2>
+      <div>
+        <p>恋愛流言社は、恋する毎日をちょっと楽しくするコラムをお届けするWebメディアです。ここにある記事はすべてフィクションです。気軽な読み物としてお楽しみください。</p>
+        <a href="#">運営について</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fl">恋愛流言社</div>
+    <ul>
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="#articles">記事一覧</a></li>
+      <li><a href="#about">運営について</a></li>
+    </ul>
+    <p class="notice">この記事はフィクションです。これ嘘でーす、ﾋﾟｯﾋﾟﾛﾋﾟｰ</p>
+    <p class="copy">© 2026 恋愛流言社</p>
+  </div>
+</footer>
+
+</body>
+</html>
